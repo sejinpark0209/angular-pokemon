@@ -56,7 +56,7 @@ The `solutions` branch has a fully built-out application that meets all the expe
 1. Fork and clone this repo.
 2. Change directories into `angular-books-crud-lab`.
 3. Start creating the files you need for your project! (`index.html` and `app.js` are safe bets to start.)
-4. Install `budo`, which you'll use as your server for this project:`npm install -g budo`
+4. Install `budo`, which you'll use to run a simple server for this project:`npm install -g budo`
 5. Run `budo -P --host=localhost --open` from the Terminal (inside your project directory). This starts a simple server that by default will serve up your `index.html` on `/` and any route it doesn't recognize (like `/books`).  Note: Your `index.html` *must* be in your main project directory for this server setup.
 
 ### Tips
