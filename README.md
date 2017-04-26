@@ -102,7 +102,7 @@ $location.path('/');
 
 
 Here is a hint on the format of template URLs when using local HTML files.
-    Give the full file name: `/templates/goats-show.html`.
+    Give the full file name: `/templates/goats/show.html`.
 
 
 ### Stretch Challenges
