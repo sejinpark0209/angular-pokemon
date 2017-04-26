@@ -1,0 +1,36 @@
+<h2>{{pokemonsShowCtrl.pokemon.name}}</h2>
+<hr>
+<div class="row">
+	<div class="col-xs-6">
+		<img ng-src="{{pokemonsShowCtrl.pokemon.image}}" class="img-responsive">
+	</div>
+	<div class="col-xs-6">
+		<p><strong>Pokedex:</strong> {{pokemonsShowCtrl.pokemon.pokedex}}</p>
+		<p><strong>Evolves From:</strong> {{pokemonsShowCtrl.pokemon.evolves_from}}</p>
+		<br>
+
+		<!-- buttons to edit/delete -->
+		<a href="#" ng-click="editForm=!editForm" class="btn btn-default">Edit <span class="glyphicon glyphicon-pencil"></span></a>&nbsp;
+		<a href="#" ng-click="pokemonsShowCtrl.deletepokemon(pokemonsShowCtrl.pokemon)" class="btn btn-default">Delete <span class="glyphicon glyphicon-trash"></span></a>
+
+		<!-- edit form -->
+		<div ng-show="editForm">
+			<br>
+	    <form ng-show="editForm" ng-submit="pokemonsShowCtrl.updatepokemon(pokemonsShowCtrl.pokemon)">
+	      <div class="form-group">
+	        <input type="text" ng-model="pokemonsShowCtrl.pokemon.name" class="form-control" placeholder="Title">
+	      </div>
+	      <div class="form-group">
+	        <input type="text" ng-model="pokemonsShowCtrl.pokemon.pokedex" class="form-control" placeholder="Pokedex">
+	      </div>
+	      <div class="form-group">
+	        <input type="text" ng-model="pokemonsShowCtrl.pokemon.image" class="form-control" placeholder="Image">
+	      </div>
+	      <div class="form-group">
+	        <input type="text" ng-model="pokemonsShowCtrl.pokemon.evolves_from" class="form-control" placeholder="Evolves From">
+	      </div>
+	      <input type="submit" value="Update pokemon" class="btn btn-default">
+	    </form>
+		</div>
+	</div>
+</div>

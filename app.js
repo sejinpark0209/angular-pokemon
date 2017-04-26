@@ -1,4 +1,4 @@
-angular.module('libraryApp', ['ngRoute'])
+angular.module('pokemonApp', ['ngRoute'])
        .config(config);
 
 
@@ -10,14 +10,14 @@ config.$inject = ['$routeProvider', '$locationProvider'];
 function config (  $routeProvider,   $locationProvider  )  {
   $routeProvider
     .when('/', {
-      templateUrl: 'templates/books/index.html',
-      controller: 'BooksIndexController',
-      controllerAs: 'booksIndexCtrl'
+      templateUrl: 'templates/pokemons/index.html',
+      controller: 'pokemonsIndexController',
+      controllerAs: 'pokemonsIndexCtrl'
     })
-    .when('/books/:id', {
-      templateUrl: 'templates/books/show.html',
-      controller: 'BooksShowController',
-      controllerAs: 'booksShowCtrl'
+    .when('/pokemons/:id', {
+      templateUrl: 'templates/pokemons/show.html',
+      controller: 'pokemonsShowController',
+      controllerAs: 'pokemonsShowCtrl'
     })
     .otherwise({
       redirectTo: '/'
