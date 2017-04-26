@@ -25,10 +25,10 @@ function pokemonsShowController($http, $routeParams, $location) {
       method: 'PUT',
       url: 'https://super-crud.herokuapp.com/pokemon/' + pokemonToUpdate._id,
       data: {
-        title : pokemonToUpdate.name,
-        author : pokemonToUpdate.pokedex,
+        name : pokemonToUpdate.name,
+        pokedex : pokemonToUpdate.pokedex,
         image : pokemonToUpdate.image,
-        releaseDate : pokemonToUpdate.evolves_from
+        evolves_from : pokemonToUpdate.evolves_from
       }
     }).then(onpokemonUpdateSuccess, onError);
 
