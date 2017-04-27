@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="pokemonApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Pokemon App</title>
+	  <!-- bootstrap css -->
+	  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	  <!-- angular -->
+	  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
+
+	  <!-- ngRoute -->
+	  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
+
+    <!-- APPLICATION SCRIPTS -->
+    <script src="/public/scripts/app.js"></script>
+    <script src="/public/scripts/controllers/PokemonsController.js"></script>
+    <script src="/public/scripts/controllers/PokemonsIndexController.js"></script>
+</head>
+<body>
+	 <h1>Pokemon List</h1>
+        <div ng-repeat="pokemon in pokemonsIndexCtrl.pokemons">
+        <div class="row">
+        <img ng-src="{{pokemon.image}}">
+        <a>{{pokemonsIndexCtrl.pokemon.name}}</a>
+        <p>{{pokemonsIndexCtrl.pokemon.pokedex}}</p>
+        <p>{{pokemonsIndexCtrl.pokemon.evolves_from}}</p>
+    </div>
+</div>
+
+</body>
+</html>
