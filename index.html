@@ -20,15 +20,15 @@
     <script src="/public/scripts/controllers/PokemonsIndexController.js"></script>
 </head>
 <body>
-	 <h1>Pokemon List</h1>
-        <div ng-repeat="pokemon in pokemonsIndexCtrl.pokemons">
+    <div class="container">
         <div class="row">
-        <img ng-src="{{pokemon.image}}">
-        <a>{{pokemonsIndexCtrl.pokemon.name}}</a>
-        <p>{{pokemonsIndexCtrl.pokemon.pokedex}}</p>
-        <p>{{pokemonsIndexCtrl.pokemon.evolves_from}}</p>
-    </div>
-</div>
+          <div class="col-md-6 col-md-offset-3">
+            <div ng-view></div>
+          </div>
+        </div>
+      </div>
+    	 
+
 
 </body>
 </html>
